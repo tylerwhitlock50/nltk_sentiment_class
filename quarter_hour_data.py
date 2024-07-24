@@ -78,5 +78,7 @@ for stock in stocks:
 # Convert the results list of tuples to a DataFrame
 results_df = pd.DataFrame(results, columns=['Title', 'Stock', 'Sentiment', 'Price Change', 'Direction'])
 
+date = str(datetime.datetime.now().date())
+
 # Save the DataFrame to a CSV file
-results_df.to_csv('data/news_results_15_min.csv', index=False)
+results_df.to_csv(f'data/news_results_15_min{date}.csv', index=False)
